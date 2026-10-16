@@ -64,10 +64,10 @@ The scripts are in [`scripts/`](scripts/), in roughly the order they run:
 | `prox_stats_all_roads.py`, `prox_stats_big_roads.py` | The charts above |
 | `inspect_bins.py`, `inspect_tier_thresholds.py`, `color.py` | Checks on the bins, thresholds and palette |
 
-The paths are hard-coded to my machine, and the data isn't in this repo because it's large (tens of GB). It's all public:
+The paths are jank and hard-coded to my machine, and the data isn't in this repo because it's tens of GB. It's all public, though, should you want to try it yourself:
 
-- Carcass collection records, 2016–2025 (Montana Department of Transportation)
-- Montana Transportation Framework (Montana State Library, MSDI)
+- Carcass collection records, 2016–2025 ([Montana Department of Transportation](https://www.mdt.mt.gov/publications/datastats/crashdata.aspx))
+- Montana Transportation Framework ([Montana State Library, MSDI](https://msl.mt.gov/geoinfo/msdi/transportation/))
 - [USGS 3D Hydrography Program](https://www.usgs.gov/3d-hydrography-program) and the [National Hydrography Dataset](https://www.usgs.gov/national-hydrography)
 - Montana Wetland and Riparian Framework (Montana Natural Heritage Program)
 - Esri World Hillshade for the shaded relief
