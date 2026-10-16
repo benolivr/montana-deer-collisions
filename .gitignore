@@ -1,0 +1,7 @@
+__pycache__/
+*.gpkg
+*.gdb/
+*.tif
+*.xlsx
+*.zip
+*.qgz
