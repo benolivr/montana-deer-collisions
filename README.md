@@ -2,7 +2,7 @@
 
 Where on Montana's roads do drivers hit deer most often, and how much of that comes down to roads running close to rivers and streams?
 
-I took Montana Department of Transportation carcass-removal records from 2016 to 2025, estimated collision density along every road in the state, and compared the worst stretches with their distance to perennial water and riparian habitat.
+I took Montana Department of Transportation carcass-removal records (2016-2025), estimated collision density along every road in the state, and compared the worst stretches with their distance to perennial water and riparian habitat.
 
 **Browse the maps at full resolution:** https://benolivr.github.io/montana-deer-collisions/
 
@@ -28,7 +28,7 @@ All three maps were made in QGIS and exported at about 14,000 × 9,900 px. Click
 
 | | |
 |---|---|
-| ![Collision rate vs. distance to water, highways](figures/view_1_distance_decay_big_roads.png) | On primary and secondary roads (122,643 segments), collision rates are highest within 250 m of perennial water, at about 3.1–3.2 carcasses per km, and fall to roughly 1.4 per km beyond 1 km. Across all roads the same shape holds at a much lower level: 0.42 per km at 50–100 m from water, 0.06 per km beyond 2.5 km. |
+| ![Collision rate vs. distance to water, highways](figures/view_1_distance_decay_big_roads.png) | On primary and secondary roads (122,643 segments), collision rates are highest within 250 m of perennial water, at about 3.1-3.2 carcasses per km, and fall to roughly 1.4 per km beyond 1 km. Across all roads the same shape holds at a much lower level: 0.42 per km at 50-100 m from water, 0.06 per km beyond 2.5 km. |
 | ![Distance to water by hazard tier, highways](figures/view_2_boxplot_big_roads.png) | The higher a highway segment's hazard tier, the closer it tends to sit to water. The median distance falls to about 190 m for the top 1% of segments. |
 | ![Share of segments within 200 m of water, highways](figures/view_3_riparian_exposure_big_roads.png) | About 30% of highway segments with no recorded collisions are within 200 m of water. For the top 1% it's over 50%. |
 
@@ -39,7 +39,7 @@ The all-roads versions of these charts are in [`figures/`](figures/). Filtering 
 1. **Carcasses.** Filtered the MDT records to white-tailed and mule deer, dropped rows flagged as invalid coordinates, and clipped to the state boundary. The records are binned to the nearest 0.1-mile marker rather than exact positions.
 2. **Road segments.** Cut every road in the Montana Transportation Framework into 160 m pieces (about 0.1 mile, to match the carcass binning), about 1.25 million in all, and snapped each carcass to the nearest segment within 500 m.
 3. **Density.** For each segment, summed a Gaussian kernel (σ = 2.5 km) over every carcass-bearing segment within 5 km, using a KD-tree for the neighbor search. Distances are straight-line, not along the road network (see below).
-4. **Classification.** Collision counts are extremely skewed, so segments with zero density get their own class and the rest are binned by percentile: 0–50th, 50–75th, 75–90th, 90–99th, and above the 99th.
+4. **Classification.** Collision counts are extremely skewed, so segments with zero density get their own class and the rest are binned by percentile: 0-50th, 50-75th, 75-90th, 90-99th, and above the 99th.
 5. **Water proximity.** Measured each segment's distance to the nearest perennial flowline (USGS 3DHP) or perennial waterbody (NHD), and compared hazard tiers on all roads and on primary and secondary roads only.
 
 ## Limitations
@@ -66,7 +66,7 @@ The scripts are in [`scripts/`](scripts/), in roughly the order they run:
 
 The paths are jank and hard-coded to my machine, and the data isn't in this repo because it's tens of GB. It's all public, though, should you want to try it yourself:
 
-- Carcass collection records, 2016–2025 ([Montana Department of Transportation](https://www.mdt.mt.gov/publications/datastats/crashdata.aspx))
+- Carcass collection records, 2016-2025 ([Montana Department of Transportation](https://www.mdt.mt.gov/publications/datastats/crashdata.aspx))
 - Montana Transportation Framework ([Montana State Library, MSDI](https://msl.mt.gov/geoinfo/msdi/transportation/))
 - [USGS 3D Hydrography Program](https://www.usgs.gov/3d-hydrography-program) and the [National Hydrography Dataset](https://www.usgs.gov/national-hydrography)
 - Montana Wetland and Riparian Framework (Montana Natural Heritage Program)
